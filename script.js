@@ -107,3 +107,22 @@ miniBag.spot = "서울";
 miniBag.change = function() {
     miniBag.color = "black";
 };
+
+function Point(xpos, ypos) {
+    this.x = xpos;
+    this.y = ypos;
+}
+Point.prototype.getDistance = function(p) {
+    return Math.sqrt(this.x * this.y + this.y * this.x);
+}
+var p1 = new Point(10, 20);
+var d1 = p1.getDistance();
+var p2 = new Point(10, 30);
+var d2 = p2.getDistance();
+document.write("d1=" + d1 + "<br>d2=" + d2 + "<br>");
+
+// justObj.toString() = function() {
+//   return "새로 생성된 객체입니다"
+// }
+// document.write(justObj.toString());
+// document.write("메롱");
