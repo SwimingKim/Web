@@ -38,14 +38,14 @@
 
 			// - 객체 리터럴
 			var p1 = { x : 300, y : 200 };
-      var p2 = { x : 350, y : 280 };
-      var rect = {
-        	topLeft : p1,
-        	bottomRight : p2,
-        	size : function() {
-          	return (this.bottomRight.x - this.topLeft.x) * (this.bottomRight.y - this.topLeft.y);
-        	}
-      };
+      			var p2 = { x : 350, y : 280 };
+      			var rect = {
+        			topLeft : p1,
+        			bottomRight : p2,
+        			size : function() {
+          				return (this.bottomRight.x - this.topLeft.x) * (this.bottomRight.y - this.topLeft.y);
+        			}
+      			};
 
 			// - 함수 리터럴
 			var add = function(op1, op2) {
