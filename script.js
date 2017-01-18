@@ -126,3 +126,12 @@ document.write("d1=" + d1 + "<br>d2=" + d2 + "<br>");
 // }
 // document.write(justObj.toString());
 // document.write("메롱");
+
+
+
+/////////////////////////////
+// 주의할 함수
+var num = 3;
+num.constructor;
+if (typeof num == 'number') {};
+if (!num.a) {};
