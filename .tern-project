@@ -5,7 +5,8 @@
    "jquery"
  ],
  "loadEagerly": [
-   "path/to/your/js/**/*.js"
+   "/study/js/jquery.mobile.1.3.2.js",
+   "/study/js/jquery-1.11.1.js"
  ],
  "dontLoad": [
    "path/to/your/js/**/*.js"
