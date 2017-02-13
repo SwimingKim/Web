@@ -72,8 +72,8 @@
         var arr3 = "1,2,3,4,5";
         arr3.split(",");
 
-        while (true) {}
-        do {} while (false)
+        // while (true) {}
+        // do {} while (false)
 
         /*
         for (var i = 0; i < cost.length; i++) {
@@ -82,6 +82,48 @@
         for (var propertyName in obj) {
             console.log("\t", propertyName, ": ", obj[propertyName]);
         }
+        */
+
+        /*
+        function fun_a() {
+          var v_a = "a";
+          function fun_b() {
+            var v_b = "b";
+            console.log("b : ", typeof(v), typeof(v_a), typeof(v_b));
+          }
+          fun_b();
+          console.log("a : ", typeof(v), typeof(v_a), typeof(v_b));
+        }
+        var v = "v";
+        fun_a();
+        console.log("o : ", typeof(v), typeof(v_a), typeof(v_b));
+        */
+
+        /*
+        function shadowing_example() {
+          var val = 5; //한 함수 안에서만 값이 유지되는 변수
+          console.log("F", val);
+          val++;
+        }
+        var val = 0; //여러 함수에서 값이 유지되면서 사용되는 변수
+        shadowing_example();
+        console.log("0", val);
+        */
+
+        /* 클로저
+        function makeCounterFunction(initVal) {
+            var count = initVal;
+
+            function Increase() {
+                count++;
+                console.log(count);
+            }
+            return Increase;
+        }
+        var counter1 = makeCounterFunction(0);
+        var counter2 = makeCounterFunction(10);
+        counter1();
+        counter2();
         */
     </script>
 </head>
