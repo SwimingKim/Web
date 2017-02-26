@@ -55,7 +55,7 @@ function clac() {
     document.getElementById("sum").value = sum;
 }
 
-function msg(name, position) {
+func  msg(name, position) {
     alert(name + "과" + position);
 }
 var msg = function() {
