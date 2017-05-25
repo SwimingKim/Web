@@ -1,11 +1,14 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "main": "calc3.js",
+  "description": "",
+  "main": "calc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "nconf": "^0.8.4"
+  }
 }

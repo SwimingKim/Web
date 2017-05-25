@@ -253,3 +253,11 @@ document.FormName["name"+0].value; // 이름이 FormName인 요소의 이름이 
 
 # JQuery - JQueryMobile
 하이브리드 앱
+
+# PHP #
+
+```
+<?php
+  $val = $_GET["val"];
+?>
+```
