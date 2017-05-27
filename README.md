@@ -258,6 +258,45 @@ document.FormName["name"+0].value; // 이름이 FormName인 요소의 이름이 
 
 ```
 <?php
-  $val = $_GET["val"];
+    echo '문자열 출력'."</br>";
+    $name = '이름;
+    $damage = mt_rand(5, 30);
+
+    $arr = array(10, array(1, 2, 3), 30, 40, 50, 60, 70, 80, 90, 100);
+    print_r($arr[1][2]);
+
+    $monsterDic1 = array(
+        "name" => "오우거",
+        "levle" => 5,
+        "hp" => 100,
+        "weapons" => array(
+            "sword" => "빛나는 검",
+            "gun" => "따발 총",
+            "bow" => ""
+        ),
+        "stage" => array("stage1", "stage2", "stage3", "stage4", "stage5")
+    );
+    echo json_encode($monsterDic1);
+
+    $getVal = $_GET["get"];
+    $postVal = $_POST["post"];
 ?>
+```
+
+# MySQL
+```
+-- 삽입
+INSERT INTO user_db (`id`, `password`, `best_click_count`, `total_click_count`, `ctype`) VALUES ('User6', '6666', 3, 10, 2);
+
+-- 수정
+UPDATE user_db SET `password`=2222 WHERE `id` = 'User2';
+
+-- 삭제
+DELETE FROM user_db WHERE `id` = 'User5';
+
+-- 조회
+SELECT*FROM user_db WHERE `id` = 'User4';
+SELECT*FROM user_db WHERE `ctype` != 2;
+SELECT*FROM user_db WHERE `total_click_count` BETWEEN 2 AND 6;
+SELECT*FROM user_db WHERE `id` LIKE '%er%';
 ```

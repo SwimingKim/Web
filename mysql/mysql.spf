@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>game_db</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>kcid</key>
+			<string>-6900855046909904241</string>
+			<key>name</key>
+			<string>127.0.0.1</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 450}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>-- 삽입
+INSERT INTO user_db (`id`, `password`, `best_click_count`, `total_click_count`, `ctype`) VALUES ('User6', '6666', 3, 10, 2);
+
+-- 수정
+UPDATE user_db SET `password`=2222 WHERE `id` = 'User2';
+
+-- 삭제
+DELETE FROM user_db WHERE `password` = '1111';
+
+-- 조회
+SELECT*FROM user_db WHERE `id` = 'User4';
+SELECT*FROM user_db WHERE `ctype` != 2;
+SELECT*FROM user_db WHERE `total_click_count` BETWEEN 2 AND 6;
+SELECT*FROM user_db WHERE `id` LIKE '%er%';
+
+SELECT*FROM user_db;</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>SELECT*FROM user_db</string>
+		<string>UPDATE user_db SET best_click_count=0, total_click_count=8 WHERE id='User1'</string>
+		<string>UPDATE user_db SET best_click_count=10, total_click_count=5 WHERE id='User1'</string>
+		<string>-- 삭제
+DELETE FROM user_db WHERE `password` = '1111'</string>
+		<string>-- 삭제
+DELETE FROM user_db WHERE `id` = 'User1', `ctype` = 2</string>
+		<string>-- 삭제
+DELETE FROM user_db WHERE `id` = 'User1', `ctype` = 3</string>
+		<string>-- 삭제
+DELETE FROM user_db WHERE `id` = 'User10'</string>
+		<string>-- 삭제
+DELETE FROM user_db WHERE `id` = 'USER'</string>
+		<string>SELECT*FROM user_db WHERE `id` LIKE '%er%'</string>
+		<string>SELECT*FROM user_db WHERE `id` LIKE 'User%'</string>
+		<string>SELECT*FROM user_db WHERE `total_click_count` BETWEEN 2 AND 6</string>
+		<string>SELECT*FROM user_db WHERE `ctype` != 2</string>
+		<string>SELECT*FORM user_db WHERE `ctype` != 2</string>
+		<string>SELECT*FORM user_db WHERE `ctype` != '2'</string>
+		<string>-- 수정
+UPDATE user_db SET `password`=2222 WHERE `id` = 'User2'</string>
+		<string>SELECT*FROM user_db WHERE `id` = 'User4'</string>
+		<string>INSERT INTO user_db (`id`, `password`, `best_click_count`, `total_click_count`, `ctype`) VALUES ('User6', '6666', 3, 10, 2)</string>
+		<string>INSERT INTO user_db (`id`, `password`, `best_click_count`, `total_click_count`, `ctype`) VALUES ('User5', '5555', 3, 5, 2)</string>
+		<string>-- INSERT INTO user_db (`id`, `password`, `best_click_count`, `total_click_count`, `ctype`) VALUES ('User5', '5555', 3, 5, 2);
+
+DELETE FROM user_db WHERE `id` = 'User5'</string>
+		<string>INSERT INTO user_db (`id`, `password`, `best_click_count`, `total_click_count`, `ctype`) VALUES ('User5', '5555', 3, 5, 2);
+-- DELETE FROM user_db WHERE `id` = 'User4';
+
+SELECT*FROM user_db</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.35</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
