@@ -285,6 +285,10 @@ document.FormName["name"+0].value; // 이름이 FormName인 요소의 이름이 
 
 # MySQL
 ```
+-- 설정
+show databases;
+use 테이블명;
+
 -- 삽입
 INSERT INTO user_db (`id`, `password`, `best_click_count`, `total_click_count`, `ctype`) VALUES ('User6', '6666', 3, 10, 2);
 
