@@ -111,6 +111,37 @@ app.post('/process/login', function(req, res) {
     }
 });
 
+app.post('/process/adduser', function(req, res) {
+    console.log('/process/adduser 호출됨');
+
+    var paramId = req.body.id || req.query.id;
+    var paramPassword = req.body.password || req.query.password;
+    var paramName = req.body.name || req.query.name;
+
+    if (database) {
+        addUser(database, paramId, paramPassword, paramName, function(err, result) {
+            if (err) { throw err; }
+
+            if (result) {
+                console.dir(result);
+
+                res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
+                res.write('<h2>사용자 추가 성공</h2>');
+                res.end();
+            } else {
+                res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
+                res.write('<h2>사용자 추가 실패</h2>');
+                res.end();
+            }
+        });
+    } else {
+        res.writeHead('200', {'Content-Type':'text/html;charset=utf8'});
+        res.write('<h2>데이터베이스 연결 실패</h2>');
+        res.end();
+    }
+
+});
+
 // 사용자를 인증하는 함수
 var authUser = function(database, id, password, callback) {
     console.log('authUser 호출됨');
@@ -132,6 +163,31 @@ var authUser = function(database, id, password, callback) {
             console.log('일치하는 사용자를 찾지 못함');
             callback(null, null);
         }
+    });
+}
+
+// 사용자를 추가하는 함수
+var addUser = function(database, id, password, name, callback) {
+    console.log('addUser 호출됨 : '+id+', '+password+', '+name);
+
+    // users 컬랙션 참조
+    var users = database.collection('users');
+    
+    // id, password, username을 사용해 사용자 추가
+    users.insertMany([{"id":id, "password":password, "name":name}], function(err, result) {
+        if (err) { // 오류가 발생했을 때 콜백 함수를 호출하면서 오류 객체 전달
+            callback(err, null);
+            return;
+        }
+        
+        // 오류가 아닌 경우, 콜백 함수를 호출하면서 결과 객체 전달
+        if (result.insertedCount > 0) {
+            console.log("사용자 레코드 추가됨 : " + result.insertedCount);
+        } else {
+            console.log("추가된 레코드가 없음");
+        }
+
+        callback(null, result);
     });
 }
 
