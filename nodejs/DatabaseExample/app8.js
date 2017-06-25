@@ -15,7 +15,7 @@ var expressErrorHandler = require('express-error-handler');
 // Session 미들웨어 불러오기
 var expressSession = require('express-session');
 
-// MySQL 데이터베이스를 사용할 수 있는 mysql 모듈 불러오기
+// MySQL 데이터베이스를 사용할 수 있는u9 mysql 모듈 불러오기
 var mysql = require('mysql');
 
 
