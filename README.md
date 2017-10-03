@@ -304,3 +304,5 @@ SELECT*FROM user_db WHERE `ctype` != 2;
 SELECT*FROM user_db WHERE `total_click_count` BETWEEN 2 AND 6;
 SELECT*FROM user_db WHERE `id` LIKE '%er%';
 ```
+
+# Canvas
