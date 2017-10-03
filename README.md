@@ -1,6 +1,6 @@
 # HTML5 & CSS
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -113,7 +113,7 @@
 
 - 입출력
 
-```
+```javascript
 alert("알러트다");
 confirm("컴펌이다");
 prompt("프롬프다", "여기 뭐게?");
@@ -121,7 +121,7 @@ prompt("프롬프다", "여기 뭐게?");
 
 - 조건문
 
-```
+```javascript
 if (true) {} else {}
 
 switch (x) {
@@ -133,7 +133,7 @@ switch (x) {
 
 - 반복문
 
-```
+```javascript
 for (var i = 0; i < 10; i++) {
     document.write(i + "<br>");
 }
@@ -151,7 +151,7 @@ do {
 
 - 함수
 
-```
+```javascript
 function clac() {
     var x = document.getElementById("x").value;
     var sum = parseInt(x);
@@ -173,7 +173,7 @@ var msg = function() {
 
 - 객체 생성
 
-```
+```javascript
 var newCar = {
     model: "benz",
     color: "black",
@@ -218,7 +218,7 @@ Point.prototype.getDistance = function(p) {
 
 - 클로져
 
-```
+```javascript
 function makeCounterFunction(initVal) {
     var count = initVal;
 
@@ -236,7 +236,7 @@ counter2();
 
 - 배열
 
-```
+```javascript
 var haha = ["apple", 3, true];
 var array1 = new Array();
 var array2 = new Array("1", "2", "3");
@@ -245,7 +245,7 @@ var array2 = new Array("1", "2", "3");
 
 - document 연관 메소드
 
-```
+```javascript
 document.write("쓰기");
 document.getElementById("id").value; // 해당 아이디 객체의 값
 document.FormName["name"+0].value; // 이름이 FormName인 요소의 이름이 name0인 객체의 값
@@ -256,10 +256,10 @@ document.FormName["name"+0].value; // 이름이 FormName인 요소의 이름이 
 
 # PHP #
 
-```
+```php
 <?php
     echo '문자열 출력'."</br>";
-    $name = '이름;
+    $name = '이름';
     $damage = mt_rand(5, 30);
 
     $arr = array(10, array(1, 2, 3), 30, 40, 50, 60, 70, 80, 90, 100);
@@ -284,7 +284,7 @@ document.FormName["name"+0].value; // 이름이 FormName인 요소의 이름이 
 ```
 
 # MySQL
-```
+```sql
 -- 설정
 show databases;
 use 테이블명;
